@@ -26,7 +26,7 @@ const ExTableUpComingTrips = () => {
     }
 
     try {
-      const response = await fetch(`http://localhost:5000/api/tripAssign/upcomingTrips/${userName}`);
+      const response = await fetch(`https://backendserver-4urp.onrender.com/api/tripAssign/upcomingTrips/${userName}`);
       const data = await response.json();
       console.log("Upcoming trips data:", data); // Log the upcoming trips data
 
@@ -43,7 +43,7 @@ const ExTableUpComingTrips = () => {
   // Fetch the location data
   const fetchLocations = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/locationDatas"); // Corrected endpoint
+      const response = await fetch("https://backendserver-4urp.onrender.com/api/locationDatas"); // Corrected endpoint
       const data = await response.json();
       console.log("Location data:", data); // Log the location data
 

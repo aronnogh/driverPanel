@@ -20,7 +20,7 @@ const Login = () => {
     setError(""); // Reset error on each attempt
 
     try {
-      const response = await fetch("http://localhost:5000/api/drivers");
+      const response = await fetch("https://backendserver-4urp.onrender.com/api/drivers");
       if (!response.ok) {
         throw new Error("Failed to fetch drivers");
       }
@@ -37,7 +37,7 @@ const Login = () => {
         login(driver.userName);
 
         // Redirecting to the dashboard page after successful login
-        navigate("/dashboards/dashboard1");
+        navigate("/upcoming-trips");
       } else {
         setError("Invalid username or password. Please try again.");
       }

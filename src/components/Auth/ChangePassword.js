@@ -24,7 +24,7 @@ const ChangePassword = () => {
       }
 
       try {
-        const response = await fetch(`http://localhost:5000/api/drivers/username/${driverNameFromCookie}`);
+        const response = await fetch(`https://backendserver-4urp.onrender.com/api/drivers/username/${driverNameFromCookie}`);
         if (!response.ok) {
           throw new Error("Failed to fetch driver details.");
         }
@@ -54,7 +54,7 @@ const ChangePassword = () => {
     setLoading(true);
 
     try {
-      const response = await fetch(`http://localhost:5000/api/drivers/username/${userName}`);
+      const response = await fetch(`https://backendserver-4urp.onrender.com/api/drivers/username/${userName}`);
       if (!response.ok) {
         throw new Error("Failed to fetch driver details.");
       }
@@ -65,7 +65,7 @@ const ChangePassword = () => {
         if (driver.password === oldPassword) {
           // Update password if old password matches
           const updateResponse = await fetch(
-            `http://localhost:5000/api/drivers/update/${driver._id}`,
+            `https://backendserver-4urp.onrender.com/api/drivers/update/${driver._id}`,
             {
               method: "PUT",
               headers: {

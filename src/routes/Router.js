@@ -11,7 +11,7 @@ const FullLayout = lazy(() => import("../layouts/FullLayout/FullLayout"));
 /****End Layouts*****/
 
 /*****Pages******/
-const Dashboard1 = lazy(() => import("../views/dashboards/Dashboard1"));
+// const Dashboard1 = lazy(() => import("../views/dashboards/Dashboard1"));
 
 
 /*****Routes******/
@@ -20,16 +20,8 @@ const ThemeRoutes = [
     path: "/",
     element: <FullLayout />,
     children: [
-      { path: "/", element: <Navigate to="/dashboards/dashboard1" replace /> },
-      {
-        path: "dashboards/dashboard1",
-        exact: true,
-        element: (
-          <ProtectedRoute>
-            <Dashboard1 />
-          </ProtectedRoute>
-        ),
-      },
+      { path: "/", element: <Navigate to="/upcoming-trips" replace /> },
+      
       { path: "/login", element: <Login /> },
 
       // past trips:
