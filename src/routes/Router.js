@@ -20,7 +20,7 @@ const ThemeRoutes = [
     path: "/",
     element: <FullLayout />,
     children: [
-      { path: "/", element: <Navigate to="/upcoming-trips" replace /> },
+      { path: "/", element: <Navigate to="/login" replace /> },
       
       { path: "/login", element: <Login /> },
 
